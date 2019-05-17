@@ -1,0 +1,37 @@
+{
+    "name": "kubill/lbs",
+    "description": "A lbs library,Support multiple service providers.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "kubill",
+            "email": "meiweijia@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.0",
+        "guzzlehttp/guzzle": "^6.3"
+
+    },
+    "autoload": {
+        "psr-4": {
+            "Kubill\\Lbs\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Kubill\\Lbs\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Kubill\\Lbs\\ServiceProvider"
+            ],
+            "aliases": {
+                "GeoCoder": "Kubill\\Lbs\\Facades\\GeoCoder"
+            }
+        }
+    }
+}
